@@ -4,55 +4,82 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="invertedThreadClocks.css">
-    <!-- clockpicker -->
-    <!-- <link rel="stylesheet" href="bootstrap-clockpicker.min.css"> -->
-    <!-- <link rel="stylesheet" href="jquery-clockpicker.min.css"> -->
-    <!-- boostrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
 
   <body>
-    <div class="container-fluid principal-container remove-all-margin-padding fill">
+    <div class="container-fluid principal-container remove-all-margin-padding">
         <div class="header row remove-all-margin-padding">
             <h1 class="text-center">  
                     Practica 1 <small>Relojes Invertidos</small>
             </h1>
         </div>
-        <div class="row medium-fill">
-            <div class="col-lg-6 fill reloj-grey" id="reloj1">
+        <div class="row">
+            <div class="col-lg-6 reloj-grey">
                 <h3 class="text-center">Reloj 1</h3> 
                 <hr class="hr-22"/>
-                <h1 class="text-center">
+                <div class="col-lg-8">
                     <div class="input-group clockpicker">
-                        <input type="text" class="form-control" value="09:30">
+                        <input type="text" class="form-control" value="09:30:00">
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-time"></span>
                         </span>
                     </div>
-                </h1>
+                </div>
+                <div class="col-lg-4">
+                    <button type="button" class="btn btn-primary" name="reloj1" onclick="setTime('reloj1');">Iniciar Reloj</button>
+                </div>
             </div>
-            <div class="col-lg-6 fill" id="reloj2">
+            <div class="col-lg-6" id="reloj2">
                 <h3 class="text-center">Reloj 2</h3>
                 <hr class="hr-22"/>
+                <div class="col-lg-8">
+                    <div class="input-group clockpicker">
+                        <input type="text" class="form-control" value="09:30:00">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <button type="button" class="btn btn-primary" name="reloj2" onclick="setTime('reloj2');">Iniciar Reloj</button>
+                </div>
             </div>
         </div>
-        <div class="row medium-fill">
-            <div class="col-lg-6 fill" id="reloj3">
+        <div class="row">
+            <div class="col-lg-6" id="reloj3">
                 <h3 class="text-center">Reloj 3</h3>
                 <hr class="hr-22"/>
+                <div class="col-lg-8">
+                    <div class="input-group clockpicker">
+                        <input type="text" class="form-control" value="09:30:00">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <button type="button" class="btn btn-primary" name="reloj3" onclick="setTime('reloj3');">Iniciar Reloj</button>
+                </div>
             </div>
-            <div class="col-lg-6 fill reloj-grey"  id="reloj4">
+            <div class="col-lg-6 reloj-grey"  id="reloj4">
                 <h3 class="text-center">Reloj 4</h3>
                 <hr class="hr-22"/>
+                <div class="col-lg-8">
+                    <div class="input-group clockpicker">
+                        <input type="text" class="form-control" value="09:30:00">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <button type="button" class="btn btn-primary" onclick="setTime('reloj4');">Iniciar Reloj</button>
+                </div>
             </div>
         </div>
     </div>
   </body>
-
-    <script
-    src="http://code.jquery.com/jquery-3.2.1.slim.js"
-    integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="
-    crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="invertedThreadClocks.js"></script>
 </html>
