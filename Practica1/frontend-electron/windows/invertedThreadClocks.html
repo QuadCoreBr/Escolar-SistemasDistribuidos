@@ -20,61 +20,93 @@
                 <hr class="hr-22"/>
                 <div class="col-lg-8">
                     <div class="input-group clockpicker">
-                        <input type="text" class="form-control" value="09:30:00">
+                        <input type="text" class="form-control" value="09:30:00" id="1">
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-time"></span>
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <button type="button" class="btn btn-primary" name="reloj1" onclick="setTime('reloj1');">Iniciar Reloj</button>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-primary" onclick="conectarReloj({id:1});">Iniciar Reloj</button>
+                </div>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-primary" 
+                    onclick="setTime(
+                        {id:1}
+                    );">
+                    Nueva Hora
+                </button>
                 </div>
             </div>
-            <div class="col-lg-6" id="reloj2">
+            <div class="col-lg-6">
                 <h3 class="text-center">Reloj 2</h3>
                 <hr class="hr-22"/>
                 <div class="col-lg-8">
                     <div class="input-group clockpicker">
-                        <input type="text" class="form-control" value="09:30:00">
+                        <input type="text" class="form-control" value="09:30:00" id="2">
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-time"></span>
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <button type="button" class="btn btn-primary" name="reloj2" onclick="setTime('reloj2');">Iniciar Reloj</button>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-primary" onclick="conectarReloj({id:1});">Iniciar Reloj</button>
+                </div>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-primary" 
+                    onclick="setTime(
+                        {id:2}
+                    );">
+                    Nueva Hora
+                </button>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6" id="reloj3">
+            <div class="col-lg-6">
                 <h3 class="text-center">Reloj 3</h3>
                 <hr class="hr-22"/>
                 <div class="col-lg-8">
                     <div class="input-group clockpicker">
-                        <input type="text" class="form-control" value="09:30:00">
+                        <input type="text" class="form-control" value="09:30:00" id="3">
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-time"></span>
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <button type="button" class="btn btn-primary" name="reloj3" onclick="setTime('reloj3');">Iniciar Reloj</button>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-primary" onclick="conectarReloj({id:1});">Iniciar Reloj</button>
+                </div>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-primary" 
+                    onclick="setTime(
+                        {id:3}
+                    );">
+                    Nueva Hora
+                </button>
                 </div>
             </div>
-            <div class="col-lg-6 reloj-grey"  id="reloj4">
+            <div class="col-lg-6 reloj-grey">
                 <h3 class="text-center">Reloj 4</h3>
                 <hr class="hr-22"/>
                 <div class="col-lg-8">
                     <div class="input-group clockpicker">
-                        <input type="text" class="form-control" value="09:30:00">
+                        <input type="text" class="form-control" value="09:30:00" id="4">
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-time"></span>
                         </span>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <button type="button" class="btn btn-primary" onclick="setTime('reloj4');">Iniciar Reloj</button>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-primary" onclick="conectarReloj({id:1});">Iniciar Reloj</button>
+                </div>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-primary" 
+                    onclick="setTime(
+                        {id:4}
+                    );">
+                    Nueva Hora
+                </button>
                 </div>
             </div>
         </div>
