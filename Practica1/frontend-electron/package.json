@@ -1,0 +1,23 @@
+{
+  "name": "frontend-electron",
+  "version": "1.0.0",
+  "description": "Frontend para la practica 1 de sistemas distribuidos. 4 hilos independientes que hacen que un correspondiente reloj vaya hacia atras en una interfaz",
+  "main": "invertedThreadClocks.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "electron" : "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdiazrdgz/Escolar-SistemasDistribuidos.git"
+  },
+  "author": "jdiazrdgz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdiazrdgz/Escolar-SistemasDistribuidos/issues"
+  },
+  "homepage": "https://github.com/jdiazrdgz/Escolar-SistemasDistribuidos#readme",
+  "dependencies": {
+    "electron": "^1.7.5"
+  }
+}
