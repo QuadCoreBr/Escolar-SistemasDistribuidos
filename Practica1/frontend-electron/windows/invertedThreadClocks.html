@@ -15,6 +15,11 @@
             </h1>
         </div>
         <div class="row">
+            <!-- Cada reloj tiene un text input time el cual tiene un value y un id -->
+            <!-- El id representa el numero del reloj con el que estamos tratando -->
+            <!-- Hay dos botones iniciar reloj y Nueva Hora -->
+            <!-- Iniciar reloj llama una funcion la cual hace la conexion socket con el server-->
+            <!-- Nueva Hora el cual envia via socket la nueva hora establecida al server -->
             <div class="col-lg-6 reloj-grey">
                 <h3 class="text-center">Reloj 1</h3> 
                 <hr class="hr-22"/>
@@ -26,14 +31,13 @@
                         </span>
                     </div>
                 </div>
+                <!-- cada funcion recibe un objeto json con la informacion necesaria -->
                 <div class="col-lg-2">
                     <button type="button" class="btn btn-primary" onclick="conectarReloj({id:1});">Iniciar Reloj</button>
                 </div>
                 <div class="col-lg-2">
                     <button type="button" class="btn btn-primary" 
-                    onclick="setTime(
-                        {id:1}
-                    );">
+                    onclick="setTime({id:1});">
                     Nueva Hora
                 </button>
                 </div>
@@ -50,7 +54,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <button type="button" class="btn btn-primary" onclick="conectarReloj({id:1});">Iniciar Reloj</button>
+                    <button type="button" class="btn btn-primary" onclick="conectarReloj({id:2});">Iniciar Reloj</button>
                 </div>
                 <div class="col-lg-2">
                     <button type="button" class="btn btn-primary" 
@@ -75,7 +79,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <button type="button" class="btn btn-primary" onclick="conectarReloj({id:1});">Iniciar Reloj</button>
+                    <button type="button" class="btn btn-primary" onclick="conectarReloj({id:3});">Iniciar Reloj</button>
                 </div>
                 <div class="col-lg-2">
                     <button type="button" class="btn btn-primary" 
@@ -98,7 +102,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2">
-                    <button type="button" class="btn btn-primary" onclick="conectarReloj({id:1});">Iniciar Reloj</button>
+                    <button type="button" class="btn btn-primary" onclick="conectarReloj({id:4});">Iniciar Reloj</button>
                 </div>
                 <div class="col-lg-2">
                     <button type="button" class="btn btn-primary" 
