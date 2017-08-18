@@ -26,14 +26,25 @@ const spawn = require('threads').spawn;
 function crearHilo(socket) {
     console.log("creando hilo para el socket :" + socket.id)
     var socketInfo = findSocketInfo(socket);
-    const reloj = spawn(function(socket, done) {
-        setInterval(function(){ 
-            console.log("hilo 3 sec");
-            // socket.emit('join',{id:dataClock.id ,time:time});
-        }, 3000);
-        done({ string : scoket.id, integer : parseInt(socket.id) });
+    const thread = spawn(function(input, done) {
+        // Everything we do here will be run in parallel in another execution context. 
+        // Remember that this function will be executed in the thread's context, 
+        // so you cannot reference any value of the surrounding code. 
+        done({ input });
+      });
+    thread
+    .send(socketInfo)
+    // The handlers come here: (none of them is mandatory) 
+    .on('message', function(response) {
+      console.log(response);
+      thread.kill();
+    })
+    .on('error', function(error) {
+      console.error('Worker errored:', error);
+    })
+    .on('exit', function() {
+      console.log('Worker has been terminated.');
     });
-    reloj.send(socket);
 }
 
 function findSocketInfo(socket) {
