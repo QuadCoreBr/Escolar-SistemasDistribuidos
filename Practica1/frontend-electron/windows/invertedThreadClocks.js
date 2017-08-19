@@ -1,6 +1,18 @@
 const io = require('socket.io-client');
 const moment = require('moment');
 
+$( document ).ready(function() {
+    $('.clockpicker').clockpicker({
+        autoclose: true,
+        'default': 'now'
+        ,donetext: 'Done'
+    });
+    var inputReloj1 =  $('#r1').clockpicker({
+        afterDone: function() {
+            console.log("hola" + io.sockets);
+        }
+    });
+});
 
 //Se tiene un array de n posibles relojes
 // reloj
@@ -11,7 +23,6 @@ const moment = require('moment');
 // }
 let relojes = new Array;
 
-let sockets = new Array;
 // dataClock {
 //     id: string,
 //     time: string
@@ -34,24 +45,23 @@ function conectarReloj(dataClock){
         // autenticamos el reloj con el servidor
         socket.emit('join',reloj);
         //el server nos confirma nuestra autenticacion
-        socket.on('join', function (data) {
-            console.log("El reloj " + data.id + "esta conectado con el servidor");
-            relojes.push(data);
+        socket.on('join', function (r) {
+            console.log("El reloj " + r.id + "esta conectado con el servidor");
+            relojes.push(r);
+            setTime(dataClock,socket);
         });
         socket.on('upgradeTime', function (reloj) {
             document.getElementById(reloj.id).value = moment(reloj.time).format("hh:mm:ss");
         });
     });
-    sockets.push(socket);
-    setTime(dataClock);
+    
 }
 
-function setTime(dataClock){
+function setTime(dataClock,socket){
     var timeStr =  $("#"+dataClock.id).attr('value');
     var time = new moment(timeStr, 'HH:mm:ss');
     var reloj = findRelojByID(dataClock.id);
     reloj.time = time;
-    var socket = getSocketByID(reloj.socket.id);
     socket.emit('newTime',reloj);
 }
 
@@ -64,12 +74,4 @@ function findRelojByID(id) {
         }
     });
     return reloj;
-}
-function getSocketByID(id){
-    var socket;
-    sockets.forEach(function(r) {
-        if (id === r.id) {
-            socket = r.socket;
-        }
-    });
 }
