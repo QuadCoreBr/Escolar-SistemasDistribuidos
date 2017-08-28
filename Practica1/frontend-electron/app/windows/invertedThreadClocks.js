@@ -2,16 +2,7 @@ const io = require('socket.io-client');
 const moment = require('moment');
 
 $( document ).ready(function() {
-    $('.clockpicker').clockpicker({
-        autoclose: true,
-        'default': 'now'
-        ,donetext: 'Done'
-    });
-    var inputReloj1 =  $('#r1').clockpicker({
-        afterDone: function() {
-            console.log("hola" + io.sockets);
-        }
-    });
+
 });
 
 //Se tiene un array de n posibles relojes
@@ -25,7 +16,6 @@ let relojes = new Array;
 
 // dataClock {
 //     id: string,
-//     time: string
 // }
 function conectarReloj(dataClock){
 
