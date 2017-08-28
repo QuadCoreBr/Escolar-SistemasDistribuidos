@@ -11,7 +11,7 @@
   <body>
     <div class="container-fluid principal-container remove-all-margin-padding">
         <div class="header row remove-all-margin-padding">
-            <h1 class="text-center">  
+            <h1 class="text-center">
                     Practica 1 <small>Relojes Invertidos</small>
             </h1>
         </div>
@@ -22,7 +22,7 @@
             <!-- Iniciar reloj llama una funcion la cual hace la conexion socket con el server-->
             <!-- Nueva Hora el cual envia via socket la nueva hora establecida al server -->
             <div class="col-lg-6 reloj-grey">
-                <h3 class="text-center">Reloj 1</h3> 
+                <h3 class="text-center">Reloj 1</h3>
                 <hr class="hr-22"/>
                 <div class="col-lg-8">
                     <div class="input-group clockpicker">
@@ -35,7 +35,6 @@
                 <!-- cada funcion recibe un objeto json con la informacion necesaria -->
                 <div class="col-lg-2">
                     <button type="button" class="btn btn-primary" onclick="conectarReloj({id:1});">Iniciar Reloj</button>
-                </div>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -51,14 +50,6 @@
                 </div>
                 <div class="col-lg-2">
                     <button type="button" class="btn btn-primary" onclick="conectarReloj({id:2});">Iniciar Reloj</button>
-                </div>
-                <div class="col-lg-2">
-                    <button type="button" class="btn btn-primary" 
-                    onclick="setTime(
-                        {id:2}
-                    );">
-                    Nueva Hora
-                </button>
                 </div>
             </div>
         </div>
@@ -77,14 +68,6 @@
                 <div class="col-lg-2">
                     <button type="button" class="btn btn-primary" onclick="conectarReloj({id:3});">Iniciar Reloj</button>
                 </div>
-                <div class="col-lg-2">
-                    <button type="button" class="btn btn-primary" 
-                    onclick="setTime(
-                        {id:3}
-                    );">
-                    Nueva Hora
-                </button>
-                </div>
             </div>
             <div class="col-lg-6 reloj-grey">
                 <h3 class="text-center">Reloj 4</h3>
@@ -99,14 +82,6 @@
                 </div>
                 <div class="col-lg-2">
                     <button type="button" class="btn btn-primary" onclick="conectarReloj({id:4});">Iniciar Reloj</button>
-                </div>
-                <div class="col-lg-2">
-                    <button type="button" class="btn btn-primary" 
-                    onclick="setTime(
-                        {id:4}
-                    );">
-                    Nueva Hora
-                </button>
                 </div>
             </div>
         </div>
